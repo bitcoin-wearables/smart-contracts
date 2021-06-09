@@ -1,5 +1,9 @@
 # Bitcoin Wearables NFT Smart Contracts <!-- omit in toc -->
 
+This repository contains the NFT smart contracts for the Bitcoin Wearables project.
+
+## About the source code
+
 The source code in this repo is based on ([ERC-721](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-721.md) standard implemented by OpenZeppelin. The tokens here instantiated makes reference to external metadata. The URI to the external metadata is defined inside the smart contract.
 
 - [Getting Started](#getting-started)
