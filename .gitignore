@@ -5,4 +5,11 @@ node_modules
 cache
 artifacts
 
-.env
+# Local development
+*.env
+*.dev
+.DS_Store
+
+# Docker
+Dockerfile
+docker-compose.yml
