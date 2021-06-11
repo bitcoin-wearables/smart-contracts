@@ -4,10 +4,10 @@ async function main() {
   const NFT = await hre.ethers.getContractFactory("BitcoinWearables");
 
   const WALLET_ADDRESS = "0x5FA988805E792B6cA0466B2dbb52693b2DEfF33F"
-  const CONTRACT_ADDRESS = "0xaD2eA9ecd3d0888b7d634368534CA145Ff2D3DCd"
+  const CONTRACT_ADDRESS = "0xFca52DD6bEa2dbDe2D7e71848c206E4294E985B0"
 
   const contract = NFT.attach(CONTRACT_ADDRESS);
-  await contract.mint(WALLET_ADDRESS);
+  await contract.mintTo(WALLET_ADDRESS);
 
   console.log("NFT minted:", contract);
 }

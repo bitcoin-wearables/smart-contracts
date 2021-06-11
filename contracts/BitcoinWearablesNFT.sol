@@ -1,30 +1,18 @@
 pragma solidity ^0.8.0;
 
-import "@openzeppelin/contracts/access/Ownable.sol";
-import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
-import "@openzeppelin/contracts/utils/Counters.sol";
+import "./ERC721Tradable.sol";
 
-contract BitcoinWearables is ERC721, Ownable {
+contract BitcoinWearables is ERC721Tradable {
   
-  using Counters for Counters.Counter;
-  Counters.Counter private _tokenIds;
+  constructor()
+      ERC721Tradable("BitcoinWearables", "BW")
+  {}
 
-  constructor() ERC721("BitcoinWearables", "BW") {}
-
-  function _baseURI() internal override view virtual returns (string memory) {
-    return "https://bitcoin-wearables.herokuapp.com/api/token/";
+  function baseTokenURI() override public pure returns (string memory) {
+      return "http://api.coinwearables.com/token/";
   }
 
-  function mint(address wearer)
-      public
-      onlyOwner
-      returns (uint256)
-  {
-      _tokenIds.increment();
-
-      uint256 newItemId = _tokenIds.current();
-      _mint(wearer, newItemId);
-
-      return newItemId;
+  function contractURI() public pure returns (string memory) {
+      return "http://api.coinwearables.com/contract/nft";
   }
 }
