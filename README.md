@@ -8,7 +8,10 @@ The source code in this repo is based on ([ERC-721](https://github.com/ethereum/
 
 - [Getting Started](#getting-started)
   - [Requirements](#requirements)
-  - [Update Metadata](#update-metadata)
+  - [Deploy Token](#deploy-token)
+  - [Mint Token](#mint-token)
+  - [Get Token information](#get-token-information)
+  - [Create/Update metadata](#create-update-metadata)
 - [Troubleshooting](#troubleshooting)
 
 ## Getting Started
@@ -30,6 +33,9 @@ Run `npx hardhat run scripts/mint-script.js --network YOUR_NETWORK`
 
 ### Get Token Information
 Run `npx hardhat run scripts/get-token-script.js --network YOUR_NETWORK`
+
+### Create/Update metadata
+To create or update metadata, find the API metadata service we created in the repository: https://github.com/bitcoin-wearables/nft-metadata-service
 
 ## Troubleshooting
 
