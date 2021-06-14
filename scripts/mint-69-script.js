@@ -7,7 +7,10 @@ async function main() {
   const CONTRACT_ADDRESS = "0x0f5767C2343D8fabb52afaDB0Acb54Ceb9b89d56"
 
   const contract = NFT.attach(CONTRACT_ADDRESS);
-  await contract.mintTo(WALLET_ADDRESS);
+
+  for (i=0; i<69; i++) {
+    await contract.mintTo(WALLET_ADDRESS);
+  }
 
   console.log("NFT minted:", contract);
 }
